@@ -27,9 +27,9 @@
         <div class="header_left">
             <div th:replace="navigation-bar :: navbar"></div>
             <div class="banner_main">
-                <h1 class="banner_taital" style="font-size: 45px;" th:text="${DataForLoadIndexPage.companyHeading}"></h1>
+                <h1> world</h1>
                 <h2>Empowering Business Solution</h2>
-                <p class="banner_text" th:text="${DataForLoadIndexPage.companyIntro}"></p>
+                <p class="banner_text" th:text="hello"></p>
             </div>
         </div>
         <div class="header_right">
@@ -38,57 +38,5 @@
     </div>
     <!-- Header Section End -->
 
-    <!-- About Section Start -->
-    <div class="services_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1 class="services_taital" th:text="${DataForLoadIndexPage.companyWelcomeHeading}"></h1>
-                    <p class="services_text" th:text="${DataForLoadIndexPage.companyShortDescription}"></p>
-                </div>
-                <div class="col-md-4">
-                    <img src="images/img-1.png" class="image_1">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About Section End -->
-
-    <!-- Services Section Start -->
-    <div class="what_we_do_section layout_padding">
-        <div class="container">
-            <h1 class="what_taital" th:text="${DataForLoadIndexPage.indexServiceHeading}"></h1>
-            <div class="what_we_do_section_2">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6" th:each="service, i : ${DataForLoadIndexPage.services}">
-                        <div class="box_main">
-                            <div class="icon_1">
-                                <img th:src="'images/icon-' + ${i.index + 1} + '.png'">
-                            </div>
-                            <h3 class="accounting_text" th:text="${service.heading}"></h3>
-                            <p class="lorem_text" th:text="${service.description}" style="overflow: hidden; max-height: 100px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis;"></p>
-                            <div class="moremore_bt_1">
-                                <a href="services">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Services Section End -->
-
-    <div th:replace="footer :: footer"></div>
-
-    <!-- JavaScript Files -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/plugin.js"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 </html>

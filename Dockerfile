@@ -2,6 +2,7 @@
 FROM maven:3.8.6-eclipse-temurin-17-alpine AS build
 WORKDIR /app
 COPY . .
+RUN mvn dependency:resolve
 RUN mvn clean package -DskipTests
 
 # Step 2: Use lightweight JDK runtime for final container

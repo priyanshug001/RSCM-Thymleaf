@@ -11,8 +11,8 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar 
 
 # Heroku dynamically assigns a port, so we use ENV and $PORT
-ENV PORT=8080
-EXPOSE 8080
+ENV PORT=8081
+EXPOSE 8081
 
 # Use the environment variable PORT
 CMD ["java", "-Dserver.port=${PORT}", "-jar", "app.jar"]

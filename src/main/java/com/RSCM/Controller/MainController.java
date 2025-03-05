@@ -132,14 +132,14 @@ public class MainController {
 		returnIndexPageData(model);
 		returnUpdatedServicesData(model);
 		returnUpdatedAboutPageData(model);
-		return "index";
+		return "redirect:/index";
 	}
 
     @GetMapping("/index")
     public String IndexPage(Model model) {
         logger.info("Inside IndexPage Controller!"); // Debugging Log
         model.addAttribute("message", "Welcome to RSCM!");
-        return "index"; // templates/index.html
+        return "redirect:/index"; // templates/index.html
     }
 
 }

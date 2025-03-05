@@ -19,7 +19,7 @@ public class MainController {
 
 	// Index Page Content and Reference
 
-	@GetMapping("/")
+	@GetMapping("/index")
 	public String HomePage(Model model) {
 		return "index";
 	}
@@ -41,7 +41,7 @@ public class MainController {
 		return "index";
 	}
 
-	@GetMapping("/about")
+	@GetMapping("/")
 	public String aboutPage(){
 	return "about";
 	}

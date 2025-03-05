@@ -21,21 +21,16 @@ public class MainController {
 
 	@GetMapping("/index")
 	public String HomePage(Model model) {
-		return "redirect:/about";
+		return "about";
 	}
 
 	@GetMapping("/error")
     public String handleError() {
-        return "redirect:/about"; // Ye "templates/error.html" file load karega
-    }
-	
-       @GetMapping("/about")
-	public String IndexPage(Model model) {
-		return "redirect:/about";
+        return "about"; // Ye "templates/error.html" file load karega
 	}
 
 	@GetMapping("/")
 	public String aboutPage(){
-	return "redirect:/about";
+	return "about";
 	}
 }

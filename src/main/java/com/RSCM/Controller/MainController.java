@@ -132,7 +132,7 @@ public class MainController {
 		return "index";
 	}
        @GetMapping("/index")
-	public String HomePage(Model model) {
+	public String IndexPage(Model model) {
 		returnIndexPageData(model);
 		returnUpdatedServicesData(model);
 		returnUpdatedAboutPageData(model);

@@ -38,7 +38,7 @@ public class MainController {
 	
        @GetMapping("/index")
 	public String IndexPage(Model model) {
-		return "index";
+		return "/templates/index.html";
 	}
 
 	@GetMapping("/about")

@@ -33,10 +33,15 @@ import com.RSCM.services.UpdatesServices;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.context.ApplicationContext;
 
 @Controller
 public class MainController {
 
+	@Autowired
+    private ApplicationContext applicationContext;
 	 // Autowired Services
 	 @Autowired
 	 private EditIndexPageServices editIndexPageServices;
@@ -131,6 +136,14 @@ public class MainController {
 		returnUpdatedAboutPageData(model);
 		return "index";
 	}
+
+    @GetMapping("/routes")
+    @ResponseBody
+    public String showRoutes() {
+        RequestMappingHandlerMapping handlerMapping = applicationContext.getBean(RequestMappingHandlerMapping.class);
+        return handlerMapping.getHandlerMethods().keySet().toString();
+    }
+	
        @GetMapping("/index")
 	public String IndexPage(Model model) {
 		returnIndexPageData(model);

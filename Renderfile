@@ -1,0 +1,21 @@
+services:
+  - name: rscm-thymeleaf
+    type: web
+    runtime: docker
+    repo: https://github.com/your-username/your-repo
+    branch: main
+    region: oregon
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        value: jdbc:mysql://auth-db1836.hstgr.io:3306/u760763407_rscm?useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true
+      - key: DATABASE_USERNAME
+        value: u760763407_rscmdatabase
+      - key: DATABASE_PASSWORD
+        value: RSCM@database2025
+      - key: SERVER_PORT
+        value: 8081
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1

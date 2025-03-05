@@ -37,6 +37,7 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class MainController {
 
+	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	 // Autowired Services
 	 @Autowired
 	 private EditIndexPageServices editIndexPageServices;
@@ -132,11 +133,11 @@ public class MainController {
 		return "index";
 	}
 
-	@GetMapping("/index")
-	public String IndexPage(Model model) {
-		returnIndexPageData(model);
-
-		return "index";
-	}
+    @GetMapping("/index")
+    public String IndexPage(Model model) {
+        logger.info("Inside IndexPage Controller!"); // Debugging Log
+        model.addAttribute("message", "Welcome to RSCM!");
+        return "index"; // templates/index.html
+    }
 
 }

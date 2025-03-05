@@ -156,4 +156,9 @@ public class MainController {
 		returnUpdatedAboutPageData(model);
 		return "redirect:/";
 	}
+
+	@GetMapping("/about")
+	public String aboutPage(){
+	return "about";
+	}
 }

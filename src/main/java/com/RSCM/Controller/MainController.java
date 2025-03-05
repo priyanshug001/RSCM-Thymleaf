@@ -124,18 +124,11 @@ public class MainController {
 
 	// Index Page Content and Reference
 
-	@GetMapping("/")
+	@GetMapping({"/", "/index"})
 	public String HomePage(Model model) {
 		returnIndexPageData(model);
 		returnUpdatedServicesData(model);
 		returnUpdatedAboutPageData(model);
-		return "index";
-	}
-
-	@GetMapping("/index")
-	public String IndexPage(Model model) {
-		returnIndexPageData(model);
-
 		return "index";
 	}
 

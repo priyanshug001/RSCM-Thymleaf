@@ -31,6 +31,7 @@ public class MainController {
 
 	@GetMapping("/")
 	public String aboutPage(){
+		System.out.println("hello from about page");
 	return "about";
 	}
 }

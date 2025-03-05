@@ -23,60 +23,18 @@
     </style>
 </head>
 <body>
-    <div class="header_section">
-        <div class="header_left">
-            <div th:replace="navigation-bar :: navbar"></div>
-        </div>
-    </div>
+   
     
-    <div class="container" th:object="${UpdatedAboutPageData}">
+    <div class="container" th:text="hello about page">
         <div class="row">
             <div class="col-md-8">
                 <h1 class="services_taital">ABOUT US</h1>
-                <p class="services_text" th:text="*{aboutUs}"></p>
+                <p class="services_text" th:text="hello google"></p>
             </div>
             <div class="col-md-4">
                 <img src="images/img-1.png" class="image_1">
             </div>
         </div>
     </div>
-    
-    <div class="container" th:each="section : ${#strings.array('Our Mission', 'Our Vision', 'WHAT WE DO', 'WHO WE ARE')}">
-        <div class="row">
-            <div class="col-md-8">
-                <h1 class="services_taital" th:text="${section}"></h1>
-                <p class="services_text" th:text="*{__${#strings.toLowerCase(section.replace(' ', ''))}__}"></p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/img-1.png" class="image_1">
-            </div>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h1 class="services_taital">WHY CHOOSE US</h1>
-                <ul>
-                    <li th:each="reason : ${UpdatedAboutPageData.whyChooseUs}" class="services_text" th:text="'✔ ' + ${reason}"></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <img src="images/img-1.png" class="image_1">
-            </div>
-        </div>
-    </div>
-    
-    <div th:replace="footer :: footer"></div>
-    
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/plugin.js"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 </html>

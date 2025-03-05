@@ -28,15 +28,8 @@ public class MainController {
     public String handleError() {
         return "error"; // Ye "templates/error.html" file load karega
     }
-
-    @GetMapping("/routes")
-    @ResponseBody
-    public String showRoutes() {
-        RequestMappingHandlerMapping handlerMapping = applicationContext.getBean(RequestMappingHandlerMapping.class);
-        return handlerMapping.getHandlerMethods().keySet().toString();
-    }
 	
-       @GetMapping("/index")
+       @GetMapping("/about")
 	public String IndexPage(Model model) {
 		return "index";
 	}

@@ -137,6 +137,11 @@ public class MainController {
 		return "index";
 	}
 
+	@GetMapping("/error")
+    public String handleError() {
+        return "error"; // Ye "templates/error.html" file load karega
+    }
+
     @GetMapping("/routes")
     @ResponseBody
     public String showRoutes() {

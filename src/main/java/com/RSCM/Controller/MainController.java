@@ -132,7 +132,7 @@ public class MainController {
 		returnIndexPageData(model);
 		returnUpdatedServicesData(model);
 		returnUpdatedAboutPageData(model);
-		return "redirect:/index";
+		return "redirect:/about";
 	}
 
     @GetMapping("/index")
